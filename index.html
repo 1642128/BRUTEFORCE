@@ -20,6 +20,10 @@
       iframe.id = "mainframe";
       iframe.classList.add('active');
       win.document.body.appendChild(iframe);
+      const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+      const script = iframeDoc.createElement('script');
+      script.src = "BRUTEFORCE.js"
+      iframeDoc.body.appendChild(script);
       document.addEventListener("keydown", bruteForce);
       win.document.title = document.getElementById("title").value;
       var file = document.getElementById("myFile").files[0];
