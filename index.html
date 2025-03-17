@@ -37,7 +37,7 @@
     } 
   </script>
   <script>
-    function bruteForce(event) {'
+    function bruteForce(event) {
       if (event.key === "a" || event.keyCode === 65) {
         for (let i = 0; i <= 9999; i++) {
           // Convert the number to a string and pad with leading zeros if necessary
@@ -50,8 +50,9 @@
             // Set the text of the element (optional for visual feedback)
             targetElement.value += textToType[charIndex];
             charIndex++;
-    }
-}
+          }
+        }
+      }
     }
   </script>
 </body>
